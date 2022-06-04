@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { View1Service } from 'projects/services/app1/view1.service';
 
 @Component({
   selector: 'app-view1',
@@ -7,9 +8,14 @@ import { Component, OnInit } from '@angular/core';
 })
 export class View1Component implements OnInit {
 
-  constructor() { }
+  constructor(private view1Service: View1Service) { }
 
   ngOnInit(): void {
+
+    this.view1Service.app1Mock()
+      .subscribe(res => {
+        console.log('Teste', res)
+      })
   }
 
 }
