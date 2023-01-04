@@ -1,1 +1,0 @@
-Adicionar arquivos de suporte como Pipes, Diretivas, Validadores, Máscaras
